@@ -35,7 +35,7 @@
     empty.classList.toggle('hidden',!!shown.length);
     grid.innerHTML = shown.map(p => `
       <button type="button" class="product-card" data-id="${p.id}" aria-label="ดูรายละเอียด ${escape(p.name)}">
-        <div class="card-img">
+        <div class="card-img${p.image?.startsWith('assets/photo-')?' has-full-photo':''}">
           ${p.image?`<img src="${escape(p.image)}" loading="lazy" alt="${escape(p.name)}"/>`:fallback(p)}
           ${p.badge?`<span class="card-tag">${escape(p.badge)}</span>`:''}
         </div>
@@ -63,11 +63,12 @@
         <p class="modal-note">${p.price===null?'เมนูนี้ยังไม่มีราคาที่ตรวจสอบแล้ว กรุณาสอบถามราคาปัจจุบันกับทางร้าน':'ราคาในภาพเมนูอ้างอิง กรุณาตรวจสอบราคาปัจจุบันกับทางร้านอีกครั้ง'}<br/>ดูรายละเอียดสินค้าและความพร้อมจำหน่ายได้ที่ SNOWTEE สาขาตลาดกระทุ่มแบน</p></div>`;
     productDialog.showModal();
   });
-  const boardTitles={fruit:'ซีรีส์ชาผลไม้',milk:'ซีรีส์ชานม',ice:'ไอศกรีมและซันเดย์',bakery:'เบเกอรี่'};
+  const boardTitles={fruit:'ซีรีส์ชาผลไม้',milk:'ซีรีส์ชานม',ice:'ไอศกรีมและซันเดย์',bakery:'เบเกอรี่','fruit-poster':'ซีรีส์ชาผลไม้สด','ice-poster':'เมนูซันเดย์','milk-poster':'ชานมหอมหวาน','smoothie-poster':'ซีรีส์สมูทตี้'};
+  const boardImages={fruit:'assets/board-fruit.webp',milk:'assets/board-milk.webp',ice:'assets/board-ice.webp',bakery:'assets/board-bakery.webp','fruit-poster':'assets/board-fruit-poster.png','ice-poster':'assets/board-ice-poster.png','milk-poster':'assets/board-milk-poster.png','smoothie-poster':'assets/board-smoothie-poster.png'};
   document.getElementById('board-grid').addEventListener('click',e=>{
     const card=e.target.closest('[data-board]');if(!card)return;
     const slug=card.dataset.board;
-    document.getElementById('board-modal-body').innerHTML=`<div class="board-modal-header">${escape(boardTitles[slug])} <small style="color:#8c7777;font:400 12px Prompt">— ภาพเมนูจากร้าน</small></div><img src="assets/board-${slug}.webp" alt="${escape(boardTitles[slug])}"/>`;
+    document.getElementById('board-modal-body').innerHTML=`<div class="board-modal-header">${escape(boardTitles[slug])} <small style="color:#8c7777;font:400 12px Prompt">— ภาพเมนูจากร้าน</small></div><img src="${escape(boardImages[slug]||('assets/board-'+slug+'.webp'))}" alt="${escape(boardTitles[slug])}"/>`;
     boardDialog.showModal();
   });
   document.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click',()=>el.closest('dialog').close()));
