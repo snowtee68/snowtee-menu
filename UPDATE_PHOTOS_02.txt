@@ -20,3 +20,4 @@ SNOWTEE MENU — อัปเดตภาพสินค้าต้นฉบั
 ยังควรตรวจสอบรายชื่อ/ราคา/ภาพจริงก่อนแชร์ลูกค้าทั่วไป
 
 ไม่แตะ repository หรือโปรเจกต์ snowtee-stock และไม่ต้องแก้ Cloudflare setting
+Trigger Cloudflare redeploy
