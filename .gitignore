@@ -1,0 +1,12 @@
+# Desktop and editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.tmp
+.vscode/
+.idea/
+# Do not add secrets, API credentials or node_modules
+.env
+.env.*
+node_modules/

@@ -1,0 +1,25 @@
+คู่มือใช้งานเร็ว — SNOWTEE (Cloudflare Pages + GitHub Desktop)
+===========================================================
+
+1) สร้าง Repository ใหม่ใน GitHub Desktop ชื่อ snowtee-menu
+2) คัดลอกโฟลเดอร์ public/ และไฟล์คู่มือ/README ทั้งหมดจาก ZIP ลง Repository snowtee-menu (ไม่ต้องคัดลอกไฟล์ ZIP เข้าไป)
+3) GitHub Desktop > Commit to main > Publish repository
+4) ไปที่ https://dash.cloudflare.com/ > Workers & Pages > Create application > Pages > Connect to Git
+5) ให้สิทธิ์ GitHub เฉพาะ snowtee-menu และเลือก repository นี้
+6) ตั้งค่า:
+   Framework preset       = None
+   Production branch      = main
+   Build command          = เว้นว่าง
+   Build output directory = public
+   Root directory         = เว้นว่าง / ค่าเริ่มต้น
+7) กด Save and Deploy แล้วคัดลอก URL *.pages.dev จากหน้า Cloudflare เมื่อสถานะสำเร็จ
+8) LINE OA Rich Menu > เมนูทั้งหมด > ประเภท URL/ลิงก์ > ใส่ URL Cloudflare (ไม่ใช้ URL github.com)
+
+แก้ราคา/ชื่อสินค้า: public/menu-data.js
+แก้ภาพ: public/assets/ และแก้ path image ที่ public/menu-data.js
+แก้ข้อความหรือหน้าแรก: public/index.html และ public/style.css
+ทุกครั้งที่แก้: GitHub Desktop > Commit to main > Push origin > รอ Cloudflare Deploy สำเร็จ
+
+ข้อควรทราบ: ไฟล์นี้ยังไม่ได้ถูกเผยแพร่จริง ต้องเชื่อม GitHub และ Cloudflare ด้วยบัญชีของคุณ
+ไม่ต้องเปิด GitHub Pages และไม่ต้องแตะ Repo กระทุ่มแบนไปด้วยกัน
+เมนู/ราคา/โปรโมชั่นต้องตรวจสอบก่อนเผยแพร่จริง

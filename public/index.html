@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="theme-color" content="#cf1824"/>
+  <meta name="description" content="สำรวจเมนูเครื่องดื่ม ไอศกรีม ชาผลไม้ ชานม มัทฉะ และเบเกอรี่จาก SNOWTEE สาขาตลาดกระทุ่มแบน" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="SNOWTEE | เมนูทั้งหมด"/>
+  <meta property="og:description" content="เลือกความอร่อยที่ชอบ สำรวจเมนูและราคา SNOWTEE"/>
+  <meta property="og:image" content="assets/snowtee-logo.png"/>
+  <link rel="icon" type="image/png" href="assets/snowtee-logo.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>SNOWTEE — เมนูทั้งหมด</title>
+</head>
+<body>
+  <div class="mini-banner"><span class="mini-star">✦</span> SNOWTEE • MARKET KRATHUM BAEN <span class="mini-star">✦</span> หวาน สดชื่น เติมความสุขในทุกวัน</div>
+  <header class="nav-wrap">
+    <nav class="nav shell" aria-label="เมนูหลัก">
+      <a class="brand" href="#home" aria-label="SNOWTEE กลับด้านบน"><img src="assets/snowtee-logo.png" width="48" height="48" alt="SNOWTEE โลโก้หมีขาว"/><span><strong>SNOWTEE</strong><small>ตลาดกระทุ่มแบน</small></span></a>
+      <div class="nav-actions">
+        <a href="#menu" class="nav-link">ดูเมนู</a>
+        <a href="#special" class="nav-link hide-small">โปรโมชั่น</a>
+        <a href="#reward" class="nav-cta">สะสมแต้ม <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero shell" aria-label="แนะนำ SNOWTEE">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> YOUR HAPPY DESSERT MOMENT</div>
+        <h1>เรื่องอร่อย<span class="hero-br"> </span>เลือกได้<span class="squiggle">ทุกวัน</span><span class="hero-dot">.</span></h1>
+        <p>รวมทุกความสดชื่นจาก <b>SNOWTEE</b> ทั้งชา ไอศกรีม เบเกอรี่ และเมนูโปรดอีกมากมาย เลือกดูราคาและค้นหาเมนูที่ใช่ได้ในหน้าเดียว</p>
+        <div class="hero-buttons"><a class="primary-btn" href="#menu">สำรวจเมนูทั้งหมด <span>↗</span></a><a class="secondary-btn" href="#boards">ดูภาพเมนูจริง</a></div>
+        <div class="hero-proof"><div class="hero-proof-icons"><span>🍦</span><span>🥤</span><span>🧁</span></div><p><b>45 เมนู</b><small>รวมเครื่องดื่ม ขนม และเมนูใหม่</small></p></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-sun"></div><div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div>
+        <div class="hero-photo photo-one"><img src="assets/fruit-passion.webp" alt="" /></div>
+        <div class="hero-photo photo-two"><img src="assets/milk-thai.webp" alt="" /></div>
+        <div class="hero-photo photo-three"><img src="assets/ice-waffle.webp" alt="" /></div>
+        <div class="hero-sticker"><span>ความสุข<br/>เริ่มต้นที่</span><strong>15฿</strong></div>
+        <div class="hero-tiny-star star-one">✳</div><div class="hero-tiny-star star-two">✦</div>
+      </div>
+    </section>
+
+    <section class="promo-section shell" id="special" aria-label="โปรโมชั่นของร้าน">
+      <div class="promo-banner">
+        <div class="promo-symbol">✦</div>
+        <div><span class="promo-kicker">SNOWTEE SPECIAL OFFER</span><h2>เครื่องดื่ม + เบเกอรี่ <strong>ลด 5 บาท</strong></h2><p>ทุกวันอังคาร • พุธ • พฤหัสบดี <span class="promo-bullet">✳</span> เวลา 14.00 – 16.00 น.</p></div>
+        <div class="promo-cutout"><span class="cutout-tag">จับคู่<br>คุ้มกว่า</span><div class="cutout-price">-5<span>฿</span></div></div>
+      </div>
+    </section>
+
+    <section class="menu-section shell" id="menu">
+      <div class="section-heading"><div><p class="section-kicker">EXPLORE OUR MENU</p><h2>เมนูทั้งหมด <span class="sparkle">✦</span></h2><p>เลือกหมวดหมู่หรือค้นหาชื่อเมนูที่อยากลองได้เลย</p></div><div class="section-count" id="total-count">ทั้งหมด 45 รายการ</div></div>
+      <div class="menu-tools">
+        <div class="category-list" role="group" aria-label="หมวดหมู่สินค้า" id="category-list"></div>
+        <div class="search-area"><label class="search-box" for="menu-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="menu-search" type="search" placeholder="ค้นหาชื่อเมนู เช่น ชาไทย มัทฉะ..." autocomplete="off"/><kbd id="search-clear" class="search-clear" role="button" tabindex="0" aria-label="ล้างคำค้นหา">✕</kbd></label><label class="sort-box">เรียงตาม <select id="sort-select"><option value="default">แนะนำ</option><option value="low">ราคาต่ำ → สูง</option><option value="high">ราคาสูง → ต่ำ</option><option value="az">ชื่อสินค้า ก–ฮ</option></select></label></div>
+      </div>
+      <div class="list-meta"><span id="result-label">แสดงสินค้าทั้งหมด</span><span class="prices-note">* เมนูที่ยังไม่ยืนยันราคาจะแสดง “สอบถามราคา”</span></div>
+      <div id="menu-grid" class="product-grid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="empty-state"><div class="empty-emoji">🍦</div><h3>ยังไม่พบเมนูที่ค้นหา</h3><p>ลองเปลี่ยนคำค้นหาหรือดูหมวดหมู่อื่นนะ</p><button type="button" id="reset-filter" class="primary-btn">ดูทุกเมนู</button></div>
+      <p class="price-disclaimer">หมายเหตุ: ราคาอ้างอิงจากภาพรายการอาหารที่ร้านส่งให้และอาจเปลี่ยนแปลงได้ กรุณายืนยันราคาปัจจุบันกับร้านก่อนเผยแพร่เว็บไซต์หรือสั่งซื้อ</p>
+    </section>
+
+    <section class="boards-section" id="boards"><div class="shell">
+      <div class="section-heading"><div><p class="section-kicker">THE ORIGINAL MENU</p><h2>ดูภาพเมนูจากร้าน</h2><p>ต้องการดูเมนูในรูปแบบแผ่นภาพต้นฉบับ? เลือกหมวดที่สนใจได้เลย</p></div></div>
+      <div class="board-grid" id="board-grid">
+        <button type="button" class="board-card" data-board="fruit"><img loading="lazy" src="assets/board-fruit.webp" alt="ภาพเมนูหมวดชาผลไม้"/><div><b>ซีรีส์ชาผลไม้</b><span>แตะเพื่อดูภาพเต็ม ↗</span></div></button>
+        <button type="button" class="board-card" data-board="milk"><img loading="lazy" src="assets/board-milk.webp" alt="ภาพเมนูหมวดชานม"/><div><b>ซีรีส์ชานม</b><span>แตะเพื่อดูภาพเต็ม ↗</span></div></button>
+        <button type="button" class="board-card" data-board="ice"><img loading="lazy" src="assets/board-ice.webp" alt="ภาพเมนูหมวดไอศกรีม"/><div><b>ไอศกรีมและซันเดย์</b><span>แตะเพื่อดูภาพเต็ม ↗</span></div></button>
+        <button type="button" class="board-card" data-board="bakery"><img loading="lazy" src="assets/board-bakery.webp" alt="ภาพเมนูหมวดเบเกอรี่"/><div><b>เบเกอรี่</b><span>แตะเพื่อดูภาพเต็ม ↗</span></div></button>
+      </div>
+    </div></section>
+
+    <section class="rewards shell" id="reward"><div class="reward-icon">★</div><div><p>SNOWTEE REWARDS</p><h2>ยิ่งแวะ ยิ่งคุ้ม!</h2><span>ซื้อครบทุก 50 บาท รับ 1 แต้ม สะสมครบ 10 แต้ม แลกรับเครื่องดื่มฟรี 1 แก้ว มูลค่าไม่เกิน 30 บาท</span><small>บัตรสะสมแต้มมีอายุ 1 เดือนนับจากวันใช้งานครั้งแรก · ตรวจสอบแต้มที่ LINE OA SNOWTEE</small></div><div class="reward-stamp"><span>10</span><small>POINTS</small><b>1 FREE DRINK</b></div></section>
+    <section class="last-call shell"><div class="last-call-copy"><span class="section-kicker">VISIT SNOWTEE</span><h2>มาเติมความสดชื่น<br/>ที่ SNOWTEE กันนะ</h2><p>SNOWTEE สาขาตลาดกระทุ่มแบน ริมคลอง ใจกลางตลาดกระทุ่มแบน</p><a class="primary-btn" href="#menu">กลับไปเลือกเมนู <span>↑</span></a></div><img src="assets/store.webp" loading="lazy" alt="ภาพร้าน SNOWTEE สาขาตลาดกระทุ่มแบน"/></section>
+  </main>
+  <footer><div class="shell footer-content"><div class="footer-brand"><img src="assets/snowtee-logo.png" width="44" height="44" alt="โลโก้ SNOWTEE"/><div><b>SNOWTEE</b><small>Good Dessert • Good Mood</small></div></div><p>© SNOWTEE · สาขาตลาดกระทุ่มแบน<br/>เว็บไซต์แสดงเมนูสินค้า ไม่ใช่ระบบรับคำสั่งซื้อ</p><a href="#home">กลับด้านบน ↑</a></div></footer>
+
+  <dialog id="product-dialog" class="modal"><button type="button" class="modal-close" aria-label="ปิดรายละเอียด" data-close>×</button><div id="product-modal-body"></div></dialog>
+  <dialog id="board-dialog" class="modal board-modal"><button type="button" class="modal-close" aria-label="ปิดภาพเมนู" data-close>×</button><div id="board-modal-body"></div></dialog>
+  <script src="menu-data.js"></script><script src="main.js"></script>
+</body></html>
