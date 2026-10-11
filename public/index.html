@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css?v=photo02"/>
   <title>SNOWTEE — เมนูทั้งหมด</title>
 </head>
 <body>
@@ -36,13 +36,13 @@
         <h1>เรื่องอร่อย<span class="hero-br"> </span>เลือกได้<span class="squiggle">ทุกวัน</span><span class="hero-dot">.</span></h1>
         <p>รวมทุกความสดชื่นจาก <b>SNOWTEE</b> ทั้งชา ไอศกรีม เบเกอรี่ และเมนูโปรดอีกมากมาย เลือกดูราคาและค้นหาเมนูที่ใช่ได้ในหน้าเดียว</p>
         <div class="hero-buttons"><a class="primary-btn" href="#menu">สำรวจเมนูทั้งหมด <span>↗</span></a><a class="secondary-btn" href="#boards">ดูภาพเมนูจริง</a></div>
-        <div class="hero-proof"><div class="hero-proof-icons"><span>🍦</span><span>🥤</span><span>🧁</span></div><p><b>45 เมนู</b><small>รวมเครื่องดื่ม ขนม และเมนูใหม่</small></p></div>
+        <div class="hero-proof"><div class="hero-proof-icons"><span>🍦</span><span>🥤</span><span>🧁</span></div><p><b>50 เมนู</b><small>รวมเครื่องดื่ม ขนม และเมนูใหม่</small></p></div>
       </div>
       <div class="hero-visual" aria-hidden="true">
         <div class="hero-sun"></div><div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div>
-        <div class="hero-photo photo-one"><img src="assets/fruit-passion.webp" alt="" /></div>
-        <div class="hero-photo photo-two"><img src="assets/milk-thai.webp" alt="" /></div>
-        <div class="hero-photo photo-three"><img src="assets/ice-waffle.webp" alt="" /></div>
+        <div class="hero-photo photo-one"><img src="assets/photo-passion-original.jpg" alt="" /></div>
+        <div class="hero-photo photo-two"><img src="assets/photo-thai-tea-original.jpg" alt="" /></div>
+        <div class="hero-photo photo-three"><img src="assets/photo-ice-vanilla-cone-original.jpg" alt="" /></div>
         <div class="hero-sticker"><span>ความสุข<br/>เริ่มต้นที่</span><strong>15฿</strong></div>
         <div class="hero-tiny-star star-one">✳</div><div class="hero-tiny-star star-two">✦</div>
       </div>
@@ -57,7 +57,7 @@
     </section>
 
     <section class="menu-section shell" id="menu">
-      <div class="section-heading"><div><p class="section-kicker">EXPLORE OUR MENU</p><h2>เมนูทั้งหมด <span class="sparkle">✦</span></h2><p>เลือกหมวดหมู่หรือค้นหาชื่อเมนูที่อยากลองได้เลย</p></div><div class="section-count" id="total-count">ทั้งหมด 45 รายการ</div></div>
+      <div class="section-heading"><div><p class="section-kicker">EXPLORE OUR MENU</p><h2>เมนูทั้งหมด <span class="sparkle">✦</span></h2><p>เลือกหมวดหมู่หรือค้นหาชื่อเมนูที่อยากลองได้เลย</p></div><div class="section-count" id="total-count">ทั้งหมด 50 รายการ</div></div>
       <div class="menu-tools">
         <div class="category-list" role="group" aria-label="หมวดหมู่สินค้า" id="category-list"></div>
         <div class="search-area"><label class="search-box" for="menu-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="menu-search" type="search" placeholder="ค้นหาชื่อเมนู เช่น ชาไทย มัทฉะ..." autocomplete="off"/><kbd id="search-clear" class="search-clear" role="button" tabindex="0" aria-label="ล้างคำค้นหา">✕</kbd></label><label class="sort-box">เรียงตาม <select id="sort-select"><option value="default">แนะนำ</option><option value="low">ราคาต่ำ → สูง</option><option value="high">ราคาสูง → ต่ำ</option><option value="az">ชื่อสินค้า ก–ฮ</option></select></label></div>
@@ -85,5 +85,5 @@
 
   <dialog id="product-dialog" class="modal"><button type="button" class="modal-close" aria-label="ปิดรายละเอียด" data-close>×</button><div id="product-modal-body"></div></dialog>
   <dialog id="board-dialog" class="modal board-modal"><button type="button" class="modal-close" aria-label="ปิดภาพเมนู" data-close>×</button><div id="board-modal-body"></div></dialog>
-  <script src="menu-data.js"></script><script src="main.js"></script>
+  <script src="menu-data.js?v=photo02"></script><script src="main.js?v=photo02"></script>
 </body></html>
