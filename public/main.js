@@ -23,6 +23,7 @@
     'smoothie': {title: 'ซีรีส์สมูทตี้', file: 'assets/originals/smoothie.png'},
     'sundae': {title: 'เมนูซันเดย์', file: 'assets/originals/sundae.png'},
     'bakery': {title: 'เมนูเบเกอรี่', file: 'assets/originals/bakery.png'},
+    'bestsellers': {title: 'เมนูขายดีต้องลอง 5 เมนู', file: 'assets/previews/bestsellers-original.png'},
     'pizza': {title: 'พิซซ่าฮาวายเอี้ยน', file: 'assets/originals/pizza-portrait.png'}
   };
   const dialog = document.getElementById('posterDialog');
