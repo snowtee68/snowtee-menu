@@ -1,75 +1,51 @@
-(()=>{
- 'use strict';
- const products=window.SNOWTEE_MENU||[];
- const cats=[['all','ทั้งหมด'],['fruit','ชาผลไม้'],['milk','ชานม'],['ice','ไอศกรีม'],['smoothie','สมูทตี้'],['matcha','มัทฉะ'],['bakery','เบเกอรี่'],['savory','พิซซ่า']];
- const catLabels=Object.fromEntries(cats);
- const grid=document.querySelector('#menu-grid');
- const catCtrl=document.querySelector('#category-controls');
- const search=document.querySelector('#menu-search');
- const sort=document.querySelector('#price-sort');
- const results=document.querySelector('#result-count');
- const empty=document.querySelector('#empty-state');
- const dialog=document.querySelector('#image-dialog');
- const dialogContent=document.querySelector('#dialog-content');
- const bakery=document.querySelector('#bakery-grid');
- const posters=document.querySelector('#poster-gallery');
- let activeCat='all';let q='';let sortValue='default';
- const clean=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const price=p=>p===null?'สอบถามราคา':`${Number(p).toLocaleString('th-TH')} บาท`;
- const preview=p=>p.preview||p.image;
- const categoryName=c=>catLabels[c]||'SNOWTEE';
- catCtrl.innerHTML=cats.map(([id,name])=>`<button type="button" class="cat-button ${id==='all'?'active':''}" data-cat="${id}" aria-pressed="${id==='all'}">${clean(name)}</button>`).join('');
- function render(){
-  let items=products.filter(p=>(activeCat==='all'||p.category===activeCat)&&(!q||`${p.name} ${p.en||''} ${categoryName(p.category)}`.toLocaleLowerCase().includes(q)));
-  if(sortValue==='asc')items.sort((a,b)=>(a.price??99999)-(b.price??99999));
-  if(sortValue==='desc')items.sort((a,b)=>(b.price??-1)-(a.price??-1));
-  if(sortValue==='alpha')items.sort((a,b)=>a.name.localeCompare(b.name,'th'));
-  results.textContent=`${activeCat==='all'?'เมนูทั้งหมด':categoryName(activeCat)} · ${items.length} รายการ`;
-  empty.hidden=items.length!==0;
-  grid.innerHTML=items.map(p=>`<button type="button" class="menu-item" data-product="${p.id}" aria-label="ดูภาพเต็ม ${clean(p.name)}"><div class="menu-image"><img src="${clean(preview(p))}" loading="lazy" alt="${clean(p.name)}">${p.badge?`<span class="menu-badge">${clean(p.badge)}</span>`:''}</div><div class="menu-caption"><p>SNOWTEE · ${clean(categoryName(p.category))}</p><h3>${clean(p.name)}</h3><span class="en">${clean(p.en||'')}</span><div class="menu-end"><span class="menu-price ${p.price===null?'unknown':''}">${p.price===null?'สอบถามราคา':`${Number(p.price)} <span>บาท</span>`}</span><span class="menu-arrow" aria-hidden="true">↗</span></div></div></button>`).join('');
- }
- function pick(cat){activeCat=cat;catCtrl.querySelectorAll('button').forEach(btn=>{const yes=btn.dataset.cat===cat;btn.classList.toggle('active',yes);btn.setAttribute('aria-pressed',String(yes));});render();}
- catCtrl.addEventListener('click',ev=>{const b=ev.target.closest('[data-cat]');if(b)pick(b.dataset.cat);});
- document.querySelectorAll('[data-go-cat]').forEach(a=>a.addEventListener('click',()=>{pick(a.dataset.goCat);}));
- search.addEventListener('input',e=>{q=e.target.value.trim().toLocaleLowerCase();render();});
- sort.addEventListener('change',e=>{sortValue=e.target.value;render();});
- const escapeModal=()=>dialog.close();
- document.querySelector('#dialog-close').addEventListener('click',escapeModal);
- dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
- function openProduct(p){
-  dialogContent.innerHTML=`<img class="modal-img" src="${clean(p.image)}" alt="${clean(p.name)}"><div class="modal-copy"><p class="micro-label">SNOWTEE · ${clean(categoryName(p.category))}</p><h3>${clean(p.name)}</h3><small>${clean(p.en||'')}</small><div class="dialog-price">${p.price===null?'สอบถามราคา':`${p.price} <span>บาท</span>`}</div><p>ภาพแสดงสินค้าต้นฉบับของร้าน ไม่มีการดัดแปลงรูปทรงของสินค้า<br>กรุณายืนยันราคาและสินค้าที่มีจำหน่ายกับสาขาตลาดกระทุ่มแบน</p></div>`;
-  dialog.showModal();
- }
- grid.addEventListener('click',ev=>{const b=ev.target.closest('[data-product]');if(!b)return;const p=products.find(x=>x.id===Number(b.dataset.product));if(p)openProduct(p);});
- // Bakery uses one combined poster plus selected original product files.
- const bakeryEntries=[
-  {type:'poster', key:'bakery-poster', title:'เมนูเบเกอรี่รวม', price:'ดูภาพรวม', image:'assets/poster-bakery-full.png', label:'SNOWTEE BAKERY'},
-  ...[32,36,37,34].map(id=>products.find(p=>p.id===id)).filter(Boolean).map(p=>({type:'product', ...p, label:'SNOWTEE BAKERY'}))
- ];
- bakery.innerHTML=bakeryEntries.map(item=>{
-   if(item.type==='poster') return `<button type="button" class="bakery-card poster-lead" data-poster-open="${clean(item.key)}" aria-label="ดูภาพเต็ม ${clean(item.title)}"><img loading="lazy" src="${clean(item.image)}" alt="${clean(item.title)}"><div class="bakery-meta"><div><small>${clean(item.label)}</small><h3>${clean(item.title)}</h3></div><b>${clean(item.price)}</b></div></button>`;
-   return `<button type="button" class="bakery-card" data-bakery="${item.id}" aria-label="ดูภาพเต็ม ${clean(item.name)}"><img loading="lazy" src="${clean(preview(item))}" alt="${clean(item.name)}"><div class="bakery-meta"><div><small>${clean(item.label)}</small><h3>${clean(item.name)}</h3></div><b>${item.price===null?'สอบถามราคา':item.price+'฿'}</b></div></button>`;
- }).join('');
- bakery.addEventListener('click',e=>{
-   const posterBtn=e.target.closest('[data-poster-open]');
-   if(posterBtn){
-     dialogContent.innerHTML=`<div class="modal-poster-head">เมนูเบเกอรี่รวม</div><div class="modal-poster"><img src="assets/poster-bakery-full.png" alt="เมนูเบเกอรี่ SNOWTEE"></div>`;
-     dialog.showModal();
-     return;
-   }
-   const b=e.target.closest('[data-bakery]');if(!b)return;const p=products.find(x=>x.id===Number(b.dataset.bakery));if(p)openProduct(p);
- });
- const posterData=[
-  ['fruit','ชาผลไม้สด','assets/poster-fruit-full.png'],
-  ['milk','ชานมหอมหวาน','assets/poster-milk-full.png'],
-  ['sundae','เมนูซันเดย์','assets/poster-sundae-full.png'],
-  ['smoothie','ซีรีส์สมูทตี้','assets/poster-smoothie-full.png'],
-  ['bakery','เบเกอรี่','assets/poster-bakery-full.png'],
-  ['pizza','พิซซ่าฮาวายเอี้ยน','assets/poster-pizza-full.png'],
-  ['matcha','มัทฉะ','assets/poster-matcha-full.png'],
-  ['okinawa','โอคินาวะและเกลือหิมะ','assets/poster-okinawa-full.jpg']
- ];
- posters.innerHTML=posterData.map(([key,title,src])=>`<button type="button" class="poster-card" data-poster="${key}" aria-label="ดูภาพเต็ม ${title}"><img src="${src}" alt="ภาพแผ่นเมนู ${title}" loading="lazy"><span class="post-text"><strong>${title}</strong><span>↗</span></span></button>`).join('');
- posters.addEventListener('click',e=>{const b=e.target.closest('[data-poster]');if(!b)return;const p=posterData.find(x=>x[0]===b.dataset.poster);if(!p)return;dialogContent.innerHTML=`<div class="modal-poster-head">${clean(p[1])}</div><div class="modal-poster"><img src="${clean(p[2])}" alt="แผ่นเมนู ${clean(p[1])}"></div>`;dialog.showModal();});
- render();
+(() => {
+  'use strict';
+  const orderUrl='https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45';
+  const button=document.getElementById('navToggle');
+  const nav=document.getElementById('mobileNav');
+  button?.addEventListener('click',()=>{
+    const open=button.getAttribute('aria-expanded')==='true';
+    button.setAttribute('aria-expanded',String(!open));
+    button.setAttribute('aria-label',open?'เปิดเมนูนำทาง':'ปิดเมนูนำทาง');
+    nav.hidden=open;
+  });
+  nav?.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.hidden=true;button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','เปิดเมนูนำทาง')}));
+  const sources={
+    'ice-cream':['assets/originals/ice-cream.png','ไอศกรีมโคนซิกเนเจอร์'],
+    'fruit-tea':['assets/originals/fruit-tea.png','ซีรีส์ชาผลไม้สด'],
+    'milk-tea':['assets/originals/milk-tea.png','ชานมหอมหวาน'],
+    'smoothie':['assets/originals/smoothie.png','ซีรีส์สมูทตี้'],
+    'sundae':['assets/originals/sundae.png','เมนูซันเดย์'],
+    'bakery':['assets/originals/bakery.png','เมนูเบเกอรี่'],
+    'pizza':['assets/originals/pizza.png','พิซซ่าฮาวายเอี้ยน'],
+    'matcha':['assets/originals/matcha.png','เมนูมัทฉะ'],
+    'okinawa':['assets/originals/okinawa.jpg','เกลือหิมะโอกินาวะ']
+  };
+  const dialog=document.getElementById('imageDialog');
+  const dialogImage=document.getElementById('dialogImage');
+  const title=document.getElementById('dialogTitle');
+  let previousFocus=null;
+  function openPhoto(source,heading,alt){
+    if(!dialog || !dialogImage)return;
+    previousFocus=document.activeElement;
+    dialogImage.src=source; dialogImage.alt=alt||heading||'แผ่นเมนู SNOWTEE';
+    title.textContent=heading||'เมนู SNOWTEE';
+    dialog.showModal();
+  }
+  document.querySelectorAll('[data-image]').forEach(button=>button.addEventListener('click',()=>{
+    const item=sources[button.dataset.image];
+    if(item)openPhoto(item[0],item[1],button.querySelector('img')?.alt);
+  }));
+  document.querySelectorAll('img[data-full]').forEach(img=>{
+    const trigger=()=>{
+      const name=img.alt.replace(/^แผ่นเมนู/,'');
+      openPhoto(img.dataset.full,name,img.alt);
+    };
+    img.addEventListener('click',trigger);
+    img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();trigger()}});
+  });
+  document.getElementById('dialogClose')?.addEventListener('click',()=>dialog.close());
+  dialog?.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
+  dialog?.addEventListener('close',()=>{dialogImage.removeAttribute('src');previousFocus?.focus?.()});
+  document.querySelectorAll('a[href*="shop=a320a425-8c1d-44b0-89c0-75acd94ced45"]').forEach(a=>a.href=orderUrl);
 })();
