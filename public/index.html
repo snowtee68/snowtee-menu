@@ -1,141 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#fbf8f2">
-  <meta name="description" content="SNOWTEE ตลาดกระทุ่มแบน — ไอศกรีมซิกเนเจอร์ ชาผลไม้สด สมูทตี้ ชานม เบเกอรี่ และพิซซ่า ชมเมนูพร้อมสั่งซื้อออนไลน์ได้เลย">
-  <meta property="og:title" content="SNOWTEE | Premium Menu — ตลาดกระทุ่มแบน">
-  <meta property="og:description" content="เริ่มต้นความสุขด้วยไอศกรีมซิกเนเจอร์ เมนูเครื่องดื่มสดชื่น และขนมอบอร่อย">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fff9f0">
+  <meta name="description" content="SNOWTEE ตลาดกระทุ่มแบน — ไอศกรีมซิกเนเจอร์ ชาผลไม้สด ชานมหอมหวาน สมูทตี้ เบเกอรี่ และพิซซ่าฮาวายเอี้ยน ดูเมนูครบและสั่งผ่านกระทุ่มแบนไปด้วยกัน">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SNOWTEE | ความสุขในทุกคำ">
+  <meta property="og:description" content="เมนูไอศกรีมซิกเนเจอร์ เครื่องดื่ม และขนมอบจาก SNOWTEE ตลาดกระทุ่มแบน">
   <meta property="og:image" content="https://snowtee-menu.pages.dev/assets/previews/ice-cream.webp">
-  <title>SNOWTEE — Premium Menu | ตลาดกระทุ่มแบน</title>
+  <title>SNOWTEE | Premium Menu • ตลาดกระทุ่มแบน</title>
   <link rel="icon" type="image/png" href="assets/snowtee-logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/previews/ice-cream.webp" as="image" type="image/webp">
-  <link rel="stylesheet" href="style.css?v=snowtee06">
+  <link rel="stylesheet" href="style.css?v=snowtee-premium07">
 </head>
 <body>
-  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
-  <div class="topline"><span>SNOWTEE · TALAD KRATHUM BAEN</span><span>YOUR LITTLE MOMENT OF JOY</span></div>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a>
   <header class="site-header" id="top">
-    <div class="header-inner container">
-      <a href="#top" class="brand" aria-label="SNOWTEE หน้าแรก">
-        <img src="assets/snowtee-logo.png" alt="โลโก้ SNOWTEE" width="50" height="50">
-        <span class="brand-name"><strong>SNOWTEE</strong><small>TALAD KRATHUM BAEN</small></span>
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="SNOWTEE หน้าแรก">
+        <img src="assets/snowtee-logo.png" width="47" height="47" alt="โลโก้ SNOWTEE">
+        <span><strong>SNOWTEE</strong><small>ตลาดกระทุ่มแบน</small></span>
       </a>
       <nav class="desktop-nav" aria-label="เมนูนำทางหลัก">
-        <a href="#signature">ซิกเนเจอร์</a>
-        <a href="#recommend">เมนูแนะนำ</a>
+        <a href="#collections">หมวดหมู่</a>
+        <a href="#recommended">เมนูแนะนำ</a>
         <a href="#bestsellers">เมนูขายดี</a>
-        <a href="#menu">เมนูทั้งหมด</a>
-        <a href="#customize">ความหวาน & ท็อปปิ้ง</a>
+        <a href="#customize">ความหวานและท็อปปิ้ง</a>
       </nav>
-      <a class="order-header" target="_blank" rel="noopener noreferrer" href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45">สั่งสินค้า <span aria-hidden="true">↗</span></a>
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="เปิดเมนูนำทาง" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a class="btn btn-red header-order" data-order href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" target="_blank" rel="noopener noreferrer">สั่งผ่านแอป <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-controls="mobileNav" aria-expanded="false" aria-label="เปิดเมนู">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <nav id="mobileNav" class="mobile-nav" aria-label="เมนูนำทางมือถือ" hidden>
-      <a href="#signature">ซิกเนเจอร์</a><a href="#recommend">เมนูแนะนำ</a><a href="#bestsellers">เมนูขายดี</a><a href="#menu">เมนูทั้งหมด</a><a href="#customize">ความหวาน & ท็อปปิ้ง</a>
+    <nav id="mobileNav" class="mobile-nav" aria-label="เมนูบนมือถือ" hidden>
+      <a href="#collections">หมวดหมู่</a><a href="#recommended">เมนูแนะนำ</a><a href="#bestsellers">เมนูขายดี</a><a href="#customize">ความหวานและท็อปปิ้ง</a>
+      <a data-order href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" target="_blank" rel="noopener noreferrer">สั่งสินค้า ↗</a>
     </nav>
   </header>
 
   <main id="main">
-    <section id="signature" class="hero-section">
-      <div class="hero-decor hero-decor-left" aria-hidden="true"></div>
-      <div class="container hero-layout">
+    <!-- HERO: keeps original poster completely visible; no image-cropping -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="red-dot"></span> OUR SIGNATURE • SNOWTEE</p>
-          <h1>ความสุข<br>เริ่มต้นที่<br><em>ไอศกรีม</em></h1>
-          <p class="hero-lead">หอมละมุน เย็นสดชื่น อร่อยได้ทุกวัน</p>
-          <p class="hero-sub">เริ่มต้นด้วยไอศกรีมโคนซิกเนเจอร์ของ SNOWTEE ก่อนเลือกชมชาผลไม้สด สมูทตี้ และเมนูอร่อยอีกมากมาย</p>
-          <div class="hero-actions"><a class="btn btn-primary" href="#menu">ชมเมนูทั้งหมด <span>↗</span></a><a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45">สั่งเลย <span>↗</span></a></div>
-          <div class="hero-foot"><span class="line"></span><span>SNOW SALT • CHOCOLATE • MATCHA • STRAWBERRY</span></div>
-        </div>
-        <div class="hero-showcase">
-          <div class="hero-halo" aria-hidden="true"></div>
-          <div class="hero-image-shell">
-            <img src="assets/previews/ice-cream.webp" alt="โปสเตอร์ไอศกรีมโคน SNOWTEE 4 รส พร้อมชื่อและราคา" width="1024" height="1448" fetchpriority="high">
+          <p class="eyebrow"><span class="sparkle">✦</span> OUR SIGNATURE · SINCE 2026</p>
+          <h1>ไอศกรีม<br><span>ซิกเนเจอร์</span><br>ความสุข<span class="line2">ในทุกคำ</span></h1>
+          <p class="hero-subtitle">เย็นฉ่ำ หอมละมุน สดชื่นได้ทุกวัน</p>
+          <p class="hero-description">4 รสชาติความอร่อยของ SNOWTEE เริ่มต้นเพียง 15 บาท ก่อนเลือกชมชาผลไม้ สมูทตี้ และขนมอีกหลากหลายเมนู</p>
+          <div class="hero-actions">
+            <a class="btn btn-red btn-large" data-order href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" target="_blank" rel="noopener noreferrer">สั่งสินค้า <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-ghost btn-large" href="#collections">ดูหมวดเมนู <span aria-hidden="true">↓</span></a>
           </div>
-          <div class="hero-floating"><span>SIGNATURE ICE CREAM</span><strong>ความอร่อยที่เริ่มต้นเพียง 15 บาท</strong></div>
-          <div class="hero-stamp" aria-hidden="true">MADE FOR<br><i>Sweet moments</i></div>
-        </div>
-      </div>
-      <div class="hero-baseline container"><span>01 / SIGNATURE COLLECTION</span><span>SCROLL TO EXPLORE ↓</span></div>
-    </section>
-
-    <div class="ribbon" aria-hidden="true"><div>SNOWTEE <span>✳</span> GOOD DESSERT, GOOD MOOD <span>✳</span> FRESH & HAPPY <span>✳</span> SNOWTEE <span>✳</span> GOOD DESSERT, GOOD MOOD</div></div>
-
-    <section id="recommend" class="section recommend-section">
-      <div class="container recommend-layout">
-        <div class="recommend-copy">
-          <p class="eyebrow"><span class="red-dot"></span> EDITOR'S PICKS • เมนูแนะนำ</p>
-          <h2>สดชื่นทุกวัน<br>กับ<span class="accent-underline">ชาผลไม้</span></h2>
-          <p class="big-copy">สีสันสดใส หอมชา ดื่มง่าย เลือกความหวานให้ตรงใจ</p>
-          <p class="body-copy">ซีรีส์ชาผลไม้สดของ SNOWTEE มีตัวเลือกหลากหลาย เหมาะกับวันที่อยากเติมความสดชื่น</p>
-          <div class="recommend-tags"><span>FRUIT TEA SERIES</span><span>REFRESHING EVERY DAY</span></div>
-          <div class="recommend-actions"><a class="btn btn-primary" href="#menu">ดูแผ่นเมนูชาผลไม้ <span>↓</span></a></div>
-        </div>
-        <div class="featured-poster poster-stage poster-stage-fruit">
-          <img src="assets/previews/fruit-tea.webp" data-full="assets/originals/fruit-tea.png" alt="แผ่นเมนูรวมซีรีส์ชาผลไม้สด SNOWTEE พร้อมชื่อและราคา" loading="lazy" width="1055" height="1491" tabindex="0" role="button" aria-label="ขยายแผ่นเมนูชาผลไม้สด">
-          <div class="poster-zoom-hint" aria-hidden="true">แตะภาพเพื่อขยาย ↗</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="bestsellers" class="section bestseller-section">
-      <div class="container">
-        <div class="section-title center-title"><p class="eyebrow"><span class="red-dot"></span> CUSTOMER FAVORITES</p><h2>เมนูขายดี <em>ที่อยากให้ลอง</em></h2><p>สี่เมนูยอดนิยมที่เราเลือกมาแนะนำให้คุณ</p></div>
-        <div class="bestseller-layout">
-          <div class="best-items" aria-label="รายชื่อเมนูขายดี">
-            <div class="best-item"><span class="best-no">01</span><div><strong>นมสดสมูทตี้</strong><small>Milk Smoothie</small></div><span class="best-flower" aria-hidden="true">✳</span></div>
-            <div class="best-item"><span class="best-no">02</span><div><strong>สตรอว์เบอร์รี่ชีสเค้ก</strong><small>Strawberry Cheesecake</small></div><span class="best-flower" aria-hidden="true">✳</span></div>
-            <div class="best-item"><span class="best-no">03</span><div><strong>ชาองุ่นเกล็ดหิมะ</strong><small>Grape Snow Tea</small></div><span class="best-flower" aria-hidden="true">✳</span></div>
-            <div class="best-item"><span class="best-no">04</span><div><strong>ชาองุ่นโบโบ้</strong><small>Grape Bobo Tea</small></div><span class="best-flower" aria-hidden="true">✳</span></div>
-            <a class="btn btn-dark" href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" target="_blank" rel="noopener noreferrer">เลือกสั่งเมนูขายดี <span>↗</span></a>
-          </div>
-          <div class="bestseller-posters">
-            <div class="bestseller-poster"><img src="assets/previews/smoothie.webp" alt="แผ่นเมนูซีรีส์สมูทตี้ SNOWTEE" data-full="assets/originals/smoothie.png" tabindex="0" role="button" aria-label="ขยายแผ่นเมนูสมูทตี้" loading="lazy" width="1055" height="1491"></div>
-            <div class="bestseller-poster"><img src="assets/previews/fruit-tea.webp" alt="แผ่นเมนูซีรีส์ชาผลไม้ SNOWTEE" data-full="assets/originals/fruit-tea.png" tabindex="0" role="button" aria-label="ขยายแผ่นเมนูชาผลไม้" loading="lazy" width="1055" height="1491"></div>
+          <div class="hero-highlights">
+            <div><span aria-hidden="true">✧</span><strong>อร่อยได้ทุกวัน</strong></div>
+            <div><span aria-hidden="true">♡</span><strong>ความสุขเล็ก ๆ ในทุกแก้ว</strong></div>
+            <div><span aria-hidden="true">✿</span><strong>เลือกเมนูโปรดได้ง่าย</strong></div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="menu" class="section catalog-section">
-      <div class="container">
-        <div class="section-title catalog-title"><p class="eyebrow"><span class="red-dot"></span> THE COMPLETE COLLECTION</p><div class="catalog-heading"><div><h2>เมนู SNOWTEE <em>ทุกความอร่อย</em></h2><p>ดูแผ่นเมนูรวมของแต่ละหมวดได้ครบทั้งชื่อ ราคา และภาพสินค้า โดยไม่ตัดขอบภาพ</p></div><span class="catalog-count">09 COLLECTIONS</span></div></div>
-        <div class="menu-grid">
-          <article class="menu-card" data-category="ice"><div class="menu-card-header"><span>01 / SIGNATURE</span><h3>ไอศกรีมโคน</h3><p>ไอศกรีมซิกเนเจอร์ SNOWTEE</p></div><button class="image-button" type="button" data-image="ice-cream" aria-label="ขยายเมนูไอศกรีมโคน"><img src="assets/previews/ice-cream.webp" alt="แผ่นเมนูไอศกรีมโคน 4 รส" loading="lazy" width="1024" height="1448"></button><div class="card-footer"><span>ICE CREAM COLLECTION</span><span>ดูภาพเต็ม ↗</span></div></article>
-          <article class="menu-card" data-category="ice"><div class="menu-card-header"><span>02 / SOFT SERVE</span><h3>เมนูซันเดย์</h3><p>ไอศกรีมพร้อมซอสและท็อปปิ้ง</p></div><button class="image-button" type="button" data-image="sundae" aria-label="ขยายเมนูซันเดย์"><img src="assets/previews/sundae.webp" alt="แผ่นเมนูซันเดย์ SNOWTEE" loading="lazy" width="1055" height="1491"></button><div class="card-footer"><span>SUNDAE COLLECTION</span><span>ดูภาพเต็ม ↗</span></div></article>
-          <article class="menu-card" data-category="tea"><div class="menu-card-header"><span>03 / FRESH</span><h3>ซีรีส์ชาผลไม้สด</h3><p>สดชื่นด้วยรสชาติของชาและผลไม้</p></div><button class="image-button" type="button" data-image="fruit-tea" aria-label="ขยายเมนูชาผลไม้สด"><img src="assets/previews/fruit-tea.webp" alt="แผ่นเมนูซีรีส์ชาผลไม้สด SNOWTEE" loading="lazy" width="1055" height="1491"></button><div class="card-footer"><span>FRUIT TEA</span><span>ดูภาพเต็ม ↗</span></div></article>
-          <article class="menu-card" data-category="tea"><div class="menu-card-header"><span>04 / CREAMY</span><h3>ชานมหอมหวาน</h3><p>ชาเข้มกลมกล่อมพร้อมตัวเลือกสุดโปรด</p></div><button class="image-button" type="button" data-image="milk-tea" aria-label="ขยายเมนูชานม"><img src="assets/previews/milk-tea.webp" alt="แผ่นเมนูชานมหอมหวาน SNOWTEE" loading="lazy" width="1055" height="1491"></button><div class="card-footer"><span>MILK TEA</span><span>ดูภาพเต็ม ↗</span></div></article>
-          <article class="menu-card" data-category="smoothie"><div class="menu-card-header"><span>05 / BLENDED</span><h3>ซีรีส์สมูทตี้</h3><p>เนื้อเนียน เย็นละมุน สดชื่นทุกคำ</p></div><button class="image-button" type="button" data-image="smoothie" aria-label="ขยายเมนูสมูทตี้"><img src="assets/previews/smoothie.webp" alt="แผ่นเมนูซีรีส์สมูทตี้ SNOWTEE" loading="lazy" width="1055" height="1491"></button><div class="card-footer"><span>SMOOTHIE</span><span>ดูภาพเต็ม ↗</span></div></article>
-          <article class="menu-card" data-category="matcha"><div class="menu-card-header"><span>06 / MATCHA</span><h3>เมนูมัทฉะ</h3><p>กลิ่นชาเขียวเข้มข้นในสไตล์ SNOWTEE</p></div><button class="image-button" type="button" data-image="matcha" aria-label="ขยายเมนูมัทฉะ"><img src="assets/previews/matcha.webp" alt="แผ่นเมนูมัทฉะ SNOWTEE" loading="lazy" width="1054" height="1492"></button><div class="card-footer"><span>MATCHA SERIES</span><span>ดูภาพเต็ม ↗</span></div></article>
-          <article class="menu-card" data-category="bakery"><div class="menu-card-header"><span>07 / FRESH BAKES</span><h3>เบเกอรี่</h3><p>ขนมอบอร่อย ๆ สำหรับทุกช่วงเวลา</p></div><button class="image-button" type="button" data-image="bakery" aria-label="ขยายเมนูเบเกอรี่"><img src="assets/previews/bakery.webp" alt="แผ่นเมนูเบเกอรี่รวม SNOWTEE" loading="lazy" width="1055" height="1491"></button><div class="card-footer"><span>BAKERY COLLECTION</span><span>ดูภาพเต็ม ↗</span></div></article>
-          <article class="menu-card" data-category="ice"><div class="menu-card-header"><span>08 / OKINAWA</span><h3>เกลือหิมะโอกินาวะ</h3><p>เมนูไอศกรีมและซันเดย์ยอดนิยม</p></div><button class="image-button" type="button" data-image="okinawa" aria-label="ขยายเมนูเกลือหิมะโอกินาวะ"><img src="assets/previews/okinawa.webp" alt="แผ่นเมนูเกลือหิมะโอกินาวะ SNOWTEE" loading="lazy" width="1076" height="1522"></button><div class="card-footer"><span>OKINAWA SNOW SALT</span><span>ดูภาพเต็ม ↗</span></div></article>
-          <article class="menu-card wide-card" data-category="savory"><div class="wide-card-copy"><span class="wide-top">09 / SAVORY FAVORITES</span><h3>พิซซ่าฮาวายเอี้ยน</h3><p>อิ่มอร่อยไปกับเมนูของคาว ก่อนหรือหลังของหวาน</p><a class="btn btn-outline" target="_blank" rel="noopener noreferrer" href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45">สั่งสินค้า ↗</a></div><button class="image-button wide-image" type="button" data-image="pizza" aria-label="ขยายเมนูพิซซ่าฮาวายเอี้ยน"><img src="assets/previews/pizza.webp" alt="แผ่นเมนูพิซซ่าฮาวายเอี้ยน 69 บาท SNOWTEE" loading="lazy" width="1448" height="1086"></button></article>
+        <div class="hero-visual">
+          <div class="hero-sun" aria-hidden="true"></div>
+          <div class="hero-poster-frame">
+            <img src="assets/previews/ice-cream.webp" alt="เมนูไอศกรีมโคน SNOWTEE สี่รส ราคาละ 15 บาท" width="1024" height="1448" fetchpriority="high">
+          </div>
+          <div class="hero-price"><small>เริ่มเพียง</small><strong>15<span>.-</span></strong></div>
+          <div class="hero-doodle" aria-hidden="true">good<br><i>dessert</i> ✳</div>
         </div>
       </div>
     </section>
 
-    <section id="customize" class="section customize-section">
+    <div class="promise-strip"><div class="container promise-inner"><span>✦ SNOWTEE ORIGINALS</span><span>GOOD DESSERT, GOOD MOOD</span><span>✦ TALAD KRATHUM BAEN</span></div></div>
+
+    <section class="section collections" id="collections">
       <div class="container">
-        <div class="section-title center-title"><p class="eyebrow"><span class="red-dot"></span> YOUR DRINK, YOUR WAY</p><h2>ปรับความอร่อย <em>ในแบบของคุณ</em></h2><p>เลือกระดับความหวาน และเพิ่มท็อปปิ้งได้ตามตัวเลือกของเมนู</p></div>
+        <div class="section-head">
+          <div><p class="eyebrow">EXPLORE OUR COLLECTION</p><h2>เลือกความอร่อย<br><em>ที่ใช่สำหรับคุณ</em></h2></div>
+          <p>รวมทุกหมวดเมนู SNOWTEE ในรูปแบบโปสเตอร์ กดดูภาพเต็มได้ชัดเจน ทั้งชื่อเมนูและราคา</p>
+        </div>
+        <div class="category-grid">
+          <button class="category-card tint-ice" type="button" data-poster="ice-cream" aria-label="เปิดโปสเตอร์ไอศกรีมโคน">
+            <div class="category-visual"><img src="assets/previews/ice-cream.webp" alt="ภาพรวมเมนูไอศกรีมโคน" loading="lazy" width="1024" height="1448"></div>
+            <div class="category-caption"><span>01 · SIGNATURE</span><h3>ไอศกรีมโคน</h3><p>ซิกเนเจอร์ SNOWTEE</p><b aria-hidden="true">↗</b></div>
+          </button>
+          <button class="category-card tint-fruit" type="button" data-poster="fruit-tea" aria-label="เปิดโปสเตอร์ชาผลไม้สด">
+            <div class="category-visual"><img src="assets/previews/fruit-tea.webp" alt="ภาพรวมซีรีส์ชาผลไม้สด" loading="lazy" width="1055" height="1491"></div>
+            <div class="category-caption"><span>02 · FRUIT TEA</span><h3>ชาผลไม้สด</h3><p>สดชื่น หอมชา ทุกแก้ว</p><b aria-hidden="true">↗</b></div>
+          </button>
+          <button class="category-card tint-milk" type="button" data-poster="milk-tea" aria-label="เปิดโปสเตอร์ชานมหอมหวาน">
+            <div class="category-visual"><img src="assets/previews/milk-tea.webp" alt="ภาพรวมซีรีส์ชานมหอมหวาน" loading="lazy" width="1055" height="1491"></div>
+            <div class="category-caption"><span>03 · MILK TEA</span><h3>ชานมหอมหวาน</h3><p>หอมชา นุ่มละมุน</p><b aria-hidden="true">↗</b></div>
+          </button>
+          <button class="category-card tint-smoothie" type="button" data-poster="smoothie" aria-label="เปิดโปสเตอร์ซีรีส์สมูทตี้">
+            <div class="category-visual"><img src="assets/previews/smoothie.webp" alt="ภาพรวมซีรีส์สมูทตี้" loading="lazy" width="1055" height="1491"></div>
+            <div class="category-caption"><span>04 · SMOOTHIE</span><h3>สมูทตี้</h3><p>นุ่มละมุน รสผลไม้</p><b aria-hidden="true">↗</b></div>
+          </button>
+          <button class="category-card tint-sundae" type="button" data-poster="sundae" aria-label="เปิดโปสเตอร์ซันเดย์">
+            <div class="category-visual"><img src="assets/previews/sundae.webp" alt="ภาพรวมเมนูซันเดย์" loading="lazy" width="1055" height="1491"></div>
+            <div class="category-caption"><span>05 · SUNDAE</span><h3>ซันเดย์ & ไอศกรีม</h3><p>หวานเย็นหลากรสชาติ</p><b aria-hidden="true">↗</b></div>
+          </button>
+          <button class="category-card tint-bakery" type="button" data-poster="bakery" aria-label="เปิดโปสเตอร์เบเกอรี่">
+            <div class="category-visual"><img src="assets/previews/bakery.webp" alt="ภาพรวมเมนูเบเกอรี่" loading="lazy" width="1055" height="1491"></div>
+            <div class="category-caption"><span>06 · BAKERY</span><h3>เบเกอรี่</h3><p>อบอุ่น หอมกรุ่นจากเตา</p><b aria-hidden="true">↗</b></div>
+          </button>
+        </div>
+        <p class="category-tip">✦ แตะที่ภาพหมวดหมู่เพื่อดูแผ่นเมนูเต็มภาพ — ไม่มีการครอปหรือแก้ไขรูปสินค้า</p>
+      </div>
+    </section>
+
+    <section class="section recommended" id="recommended">
+      <div class="container highlight-layout">
+        <div class="highlight-copy">
+          <p class="eyebrow"><span class="sparkle">✧</span> OUR RECOMMENDATION</p>
+          <h2>เมนูแนะนำ<br><em>ชาผลไม้สด</em></h2>
+          <p class="highlight-lead">เติมความสดชื่นให้ทุกช่วงเวลา</p>
+          <p class="muted-copy">มีทั้งเมนูชาและรสผลไม้ให้เลือก ชมภาพเมนูรวมเพื่อดูรายละเอียดและราคาครบทุกแก้ว</p>
+          <button type="button" class="btn btn-red btn-large" data-poster="fruit-tea">ดูโปสเตอร์ชาผลไม้ <span aria-hidden="true">↗</span></button>
+          <span class="small-note">FRESH TEA · FRUIT FLAVORS · SWEET MOMENTS</span>
+        </div>
+        <button class="feature-poster" type="button" data-poster="fruit-tea" aria-label="ดูโปสเตอร์ชาผลไม้สดขนาดเต็ม">
+          <img src="assets/previews/fruit-tea.webp" alt="โปสเตอร์ชาผลไม้สด SNOWTEE" loading="lazy" width="1055" height="1491">
+          <span>ดูภาพเต็ม <b>↗</b></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section bestsellers" id="bestsellers">
+      <div class="container">
+        <div class="section-head compact-head"><div><p class="eyebrow">CUSTOMER FAVORITES</p><h2>เมนูขายดี <em>ต้องลอง!</em></h2></div><p>สี่เมนูยอดนิยมจาก SNOWTEE ที่อยากให้คุณได้ลิ้มลอง</p></div>
+        <div class="best-layout">
+          <div class="best-list">
+            <div class="best-row"><span>01</span><strong>นมสดสมูทตี้</strong><small>เนียนละมุน</small></div>
+            <div class="best-row"><span>02</span><strong>สตรอเบอร์รี่ชีสเค้ก</strong><small>เปรี้ยวหวานลงตัว</small></div>
+            <div class="best-row"><span>03</span><strong>ชาองุ่นเกล็ดหิมะ</strong><small>สดชื่น เย็นฉ่ำ</small></div>
+            <div class="best-row"><span>04</span><strong>ชาองุ่นโบโบ้</strong><small>สนุกทุกคำ</small></div>
+            <a class="btn btn-red best-order" data-order href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" target="_blank" rel="noopener noreferrer">สั่งเมนูขายดี <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="best-gallery" aria-label="โปสเตอร์หมวดเมนูขายดี">
+            <button type="button" data-poster="smoothie"><img src="assets/previews/smoothie.webp" alt="ภาพรวมเมนูสมูทตี้" loading="lazy" width="1055" height="1491"><span>ซีรีส์สมูทตี้ ↗</span></button>
+            <button type="button" data-poster="fruit-tea"><img src="assets/previews/fruit-tea.webp" alt="ภาพรวมเมนูชาผลไม้" loading="lazy" width="1055" height="1491"><span>ซีรีส์ชาผลไม้ ↗</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pizza-section" id="pizza">
+      <div class="container pizza-layout">
+        <div class="pizza-copy"><p class="eyebrow">SOMETHING SAVORY</p><span class="pizza-tag">ใหม่ & น่าลอง</span><h2>พิซซ่า<br><em>ฮาวายเอี้ยน</em></h2><p>หอมกรุ่นจากเตา อร่อยในทุกชิ้น เพิ่มความอิ่มอร่อยให้มื้อของคุณ</p><strong class="pizza-price">69 <small>บาท / ถาด</small></strong><button type="button" data-poster="pizza" class="btn btn-outline">ดูโปสเตอร์พิซซ่า ↗</button></div>
+        <button type="button" data-poster="pizza" class="pizza-poster" aria-label="ขยายภาพโปสเตอร์พิซซ่าฮาวายเอี้ยน"><img src="assets/previews/pizza-portrait.webp" alt="โปสเตอร์พิซซ่าฮาวายเอี้ยน SNOWTEE ราคา 69 บาท" loading="lazy" width="800" height="1200"></button>
+      </div>
+    </section>
+
+    <section class="section customize" id="customize">
+      <div class="container">
+        <div class="section-head compact-head"><div><p class="eyebrow">MAKE IT YOURS</p><h2>เลือกความอร่อย <em>ในแบบคุณ</em></h2></div><p>รายละเอียดระดับความหวานและท็อปปิ้งสำหรับเครื่องดื่มที่รองรับการปรับแต่ง</p></div>
         <div class="customize-grid">
-          <div class="option-panel"><div class="option-top"><span>01 / SWEETNESS LEVEL</span><span aria-hidden="true">✳</span></div><h3>เลือกระดับความหวาน</h3><p class="option-description">เลือกตามความชอบสำหรับเครื่องดื่มที่รองรับการปรับระดับน้ำตาล</p><div class="sugar-list"><div><span class="sugar-meter s100"></span><strong>100%</strong><small>หวานปกติ</small></div><div><span class="sugar-meter s70"></span><strong>70%</strong><small>หวานน้อยลง</small></div><div><span class="sugar-meter s50"></span><strong>50%</strong><small>หวานน้อย</small></div><div><span class="sugar-meter s0"></span><strong>0%</strong><small>ไม่เติมความหวาน*</small></div></div><p class="fineprint">* ความหวานจากผลไม้ นม หรือส่วนผสมที่มีอยู่ในสูตรอาจยังคงอยู่</p></div>
-          <div class="option-panel"><div class="option-top"><span>02 / TOPPINGS</span><span aria-hidden="true">✳</span></div><h3>เพิ่มท็อปปิ้งที่ชอบ</h3><p class="option-description">เติมความสนุกให้แก้วโปรด เลือกเพิ่มได้ตามรายการที่รองรับ</p><div class="toppings-grid"><span>วุ้นมะพร้าว</span><span>ไข่มุก</span><span>บุกไข่มุก</span><span>วุ้นเบอร์รี่</span><span>พุดดิ้งนม</span><span>เยลลี่ชาดำ</span></div><div class="toppings-price"><strong>+5 <span>บาท</span></strong><small>ต่อท็อปปิ้ง 1 รายการ</small></div><p class="fineprint">* ท็อปปิ้งและตัวเลือกบางรายการอาจแตกต่างกันตามเมนู</p></div>
+          <div class="option-card sweetness"><div class="card-top"><span aria-hidden="true">◌</span><small>01 · SWEETNESS</small></div><h3>เลือกระดับความหวาน</h3><p>ปรับความหวานให้ถูกใจ สำหรับเมนูที่สามารถเลือกได้</p><div class="sweet-list"><div><b>100%</b><span>หวานปกติ</span></div><div><b>70%</b><span>หวานน้อยลง</span></div><div><b>50%</b><span>หวานน้อย</span></div><div><b>0%</b><span>ไม่เติมน้ำตาล*</span></div></div><small class="disclaimer">* รสหวานจากส่วนผสมตามสูตรอาจยังคงอยู่</small></div>
+          <div class="option-card toppings"><div class="card-top"><span aria-hidden="true">✦</span><small>02 · TOPPINGS</small></div><h3>เพิ่มท็อปปิ้ง +5 บาท</h3><p>เพิ่มความอร่อยอีกนิดให้ทุกแก้ว เลือกได้ตามเมนูที่รองรับ</p><div class="toppings-list"><span>วุ้นมะพร้าว</span><span>ไข่มุก</span><span>บุกไข่มุก</span><span>วุ้นเบอร์รี่</span><span>พุดดิ้งนม</span><span>เยลลี่ชาดำ</span></div><small class="disclaimer">* ราคาต่อท็อปปิ้ง 1 รายการ และตัวเลือกอาจแตกต่างตามเมนู</small></div>
         </div>
       </div>
     </section>
 
-    <section id="order" class="order-section"><div class="container order-inner"><div><p class="eyebrow">READY FOR SOMETHING SWEET?</p><h2>พร้อมเติมความสุข<br>ให้วันนี้หรือยัง?</h2><p>เลือกเมนูที่ชอบ แล้วกดสั่งผ่านระบบกระทุ่มแบนไปด้วยกันได้เลย</p></div><a href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" class="btn btn-white" target="_blank" rel="noopener noreferrer">สั่ง SNOWTEE ตอนนี้ <span>↗</span></a></div></section>
+    <section class="order-section" id="order"><div class="container order-content"><div><p class="eyebrow">READY TO ORDER?</p><h2>ความสุขอยู่ใกล้แค่คลิกเดียว</h2><p>เลือกเมนูที่ชอบ แล้วสั่งตรงจากร้าน SNOWTEE ผ่านกระทุ่มแบนไปด้วยกัน</p></div><a data-order class="btn btn-white btn-large" href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" target="_blank" rel="noopener noreferrer">สั่งผ่านแอปเลย <span aria-hidden="true">↗</span></a></div></section>
   </main>
+  <footer><div class="container footer-content"><a class="brand footer-brand" href="#top"><img src="assets/snowtee-logo.png" alt="" width="44" height="44"><span><strong>SNOWTEE</strong><small>ตลาดกระทุ่มแบน</small></span></a><small>GOOD DESSERT. GOOD MOOD. · © SNOWTEE</small><a href="#top">กลับขึ้นด้านบน ↑</a></div></footer>
 
-  <footer><div class="container footer-inner"><div class="footer-brand"><img src="assets/snowtee-logo.png" alt="SNOWTEE" width="50" height="50"><div><strong>SNOWTEE</strong><small>ตลาดกระทุ่มแบน</small></div></div><p>GOOD DESSERT. GOOD MOOD. · © SNOWTEE</p><a href="#top">กลับขึ้นด้านบน ↑</a></div></footer>
-
-  <a class="mobile-order-fixed" href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" target="_blank" rel="noopener noreferrer" aria-label="สั่งสินค้า SNOWTEE ผ่านแอปกระทุ่มแบนไปด้วยกัน"><span>สั่งสินค้า SNOWTEE</span><span aria-hidden="true">↗</span></a>
-  <dialog class="image-dialog" id="imageDialog" aria-label="ดูภาพเมนูขนาดเต็ม"><div class="dialog-top"><strong id="dialogTitle">เมนู SNOWTEE</strong><button id="dialogClose" type="button" aria-label="ปิดภาพ">✕</button></div><div class="dialog-image-wrap"><img id="dialogImage" alt="" src=""></div></dialog>
-  <script src="main.js?v=snowtee06" defer></script>
+  <a class="mobile-order" data-order href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">➜</span> สั่งผ่านแอป กระทุ่มแบนไปด้วยกัน <b>↗</b></a>
+  <dialog class="poster-dialog" id="posterDialog" aria-label="ภาพโปสเตอร์เมนูเต็มภาพ"><div class="dialog-bar"><strong id="dialogTitle">เมนู SNOWTEE</strong><div><a id="dialogOrder" data-order class="dialog-order" href="https://xn--12ca0dlkcdj5coe8c9fxa0hzg3bzd0a.com/?shop=a320a425-8c1d-44b0-89c0-75acd94ced45" target="_blank" rel="noopener noreferrer">สั่งสินค้า ↗</a><button type="button" id="dialogClose" aria-label="ปิดภาพโปสเตอร์">✕</button></div></div><div class="dialog-scroll"><img id="dialogImage" alt="" src=""></div></dialog>
+  <script src="main.js?v=snowtee-premium07" defer></script>
 </body>
 </html>
