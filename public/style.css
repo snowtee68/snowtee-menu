@@ -61,12 +61,26 @@
 @media(max-width:850px){.best-poster-layout{grid-template-columns:1fr;gap:12px}.best-info{padding:9px 0}.best-info h3{font-size:27px}.best-five{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}.best-five li{font-size:13px}}
 @media(max-width:500px){.best-poster-layout{gap:12px}.bestseller-poster{padding:6px;border-radius:12px}.bestseller-poster img{border-radius:7px}.best-info h3{font-size:24px}.best-five{grid-template-columns:1fr;padding-left:25px}.best-five li{font-size:13px;padding:8px 1px}.options-visual{max-height:140px}}
 
-/* SNOWTEE V10: red sweetness and toppings cards */
-.option-card.sweetness,.option-card.toppings{background:linear-gradient(180deg,#e01a31 0%,#c21429 100%);border:none;box-shadow:0 16px 32px rgba(124,11,27,.16);color:#fff}
-.option-card.sweetness h3,.option-card.toppings h3,.option-card.sweetness .card-top,.option-card.toppings .card-top{color:#fff}
-.option-card.sweetness>p,.option-card.toppings>p,.option-card.sweetness .disclaimer,.option-card.toppings .disclaimer,.option-card.sweetness .card-top small,.option-card.toppings .card-top small{color:rgba(255,255,255,.88)}
-.option-card.sweetness .card-top span,.option-card.toppings .card-top span{color:#ffe5e8}
-.option-card.sweetness .sweet-list>div,.option-card.toppings .toppings-list span{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);color:#fff}
-.option-card.sweetness .sweet-list b{color:#fff}
-.options-visual{display:block;width:100%;height:auto;max-height:170px;object-fit:contain;object-position:center;background:transparent !important;border:none !important;border-radius:0 !important;margin:2px 0 18px;filter:drop-shadow(0 8px 14px rgba(108,4,18,.18))}
-@media(max-width:650px){.options-visual{max-height:145px;margin-bottom:14px}}
+/* V11 mobile-first poster-led editorial layout */
+@media(max-width:650px){
+ .recommended .highlight-layout,.pizza-section .pizza-layout{display:flex;flex-direction:column;gap:14px}
+ .recommended .highlight-copy,.pizza-section .pizza-copy{padding:0;display:block}
+ .recommended .highlight-copy h2,.pizza-section .pizza-copy h2{font-size:clamp(29px,8vw,40px);line-height:1.24;margin:5px 0 8px}
+ .recommended .highlight-copy h2 br,.pizza-section .pizza-copy h2 br{display:none}
+ .recommended .highlight-copy .highlight-lead,.pizza-section .pizza-copy>p:not(.eyebrow){font-size:12px;line-height:1.5;margin:6px 0 0}
+ .recommended .highlight-copy .eyebrow,.pizza-section .pizza-copy .eyebrow{font-size:9px;margin:0 0 7px}
+ .pizza-section .pizza-copy .pizza-tag{font-size:11px;padding:7px 11px}
+ .pizza-section .pizza-price{display:inline-flex;align-items:baseline;gap:6px;font-size:27px;margin:8px 0 0}
+ .pizza-section .pizza-price small{font-size:12px}
+ .recommended .feature-poster,.pizza-section .pizza-poster{padding:7px;width:100%;max-width:450px;margin:0 auto}
+ .recommended.section,.pizza-section.section{padding-top:40px;padding-bottom:40px}
+ .hero-actions .btn{max-width:240px}
+ .bestsellers .best-info{padding:2px 0 0}
+}
+
+/* V12: Images alone have plain white backdrops; restore original card/section styles. */
+.options-visual{background:#fff;border:1px solid #f1e1d0;border-radius:12px;filter:none;object-fit:contain;width:100%;height:auto;max-height:175px;padding:4px}
+
+/* V13: preserve the full uncropped user-supplied option posters */
+.option-card .options-visual{display:block;width:100%;height:auto;max-height:none;object-fit:contain;box-sizing:border-box;background:#fff;padding:0;border:none;border-radius:10px;filter:none}
+@media(max-width:500px){.option-card .options-visual{max-height:none;height:auto}}
