@@ -8,7 +8,8 @@ window.SNOWTEE_MENU = [
     "en": "Passion Fruit Tea",
     "badge": "ยอดนิยม",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-01.webp"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@ window.SNOWTEE_MENU = [
     "en": "Fresh Lemonade",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-02.webp"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@ window.SNOWTEE_MENU = [
     "en": "Lemon Black Tea",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-03.webp"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@ window.SNOWTEE_MENU = [
     "en": "Grape Bobo Tea",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-04.webp"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@ window.SNOWTEE_MENU = [
     "en": "Strawberry Bobo Tea",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-05.webp"
   },
   {
     "id": 6,
@@ -63,7 +68,8 @@ window.SNOWTEE_MENU = [
     "en": "Black Tea",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-06.webp"
   },
   {
     "id": 7,
@@ -74,7 +80,8 @@ window.SNOWTEE_MENU = [
     "en": "Peach Jasmine Tea",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-07.webp"
   },
   {
     "id": 8,
@@ -85,7 +92,8 @@ window.SNOWTEE_MENU = [
     "en": "Grape Berry Snow",
     "badge": "ยอดนิยม",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-08.webp"
   },
   {
     "id": 9,
@@ -96,7 +104,8 @@ window.SNOWTEE_MENU = [
     "en": "Jasmine Tea",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-09.webp"
   },
   {
     "id": 10,
@@ -107,7 +116,8 @@ window.SNOWTEE_MENU = [
     "en": "Strawberry Snow Smoothie",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-10.webp"
   },
   {
     "id": 46,
@@ -118,7 +128,8 @@ window.SNOWTEE_MENU = [
     "en": "Coconut Water",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-46.webp"
   },
   {
     "id": 11,
@@ -129,7 +140,8 @@ window.SNOWTEE_MENU = [
     "en": "Green Milk Tea",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-11.webp"
   },
   {
     "id": 12,
@@ -140,7 +152,8 @@ window.SNOWTEE_MENU = [
     "en": "Thai Tea",
     "badge": "แนะนำ",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-12.webp"
   },
   {
     "id": 13,
@@ -151,7 +164,8 @@ window.SNOWTEE_MENU = [
     "en": "Bubble Milk Tea",
     "badge": "ยอดนิยม",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-13.webp"
   },
   {
     "id": 14,
@@ -162,7 +176,8 @@ window.SNOWTEE_MENU = [
     "en": "Brown Sugar Bubble Milk Tea",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-14.webp"
   },
   {
     "id": 15,
@@ -173,7 +188,8 @@ window.SNOWTEE_MENU = [
     "en": "Original Milk Tea",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-15.webp"
   },
   {
     "id": 16,
@@ -184,7 +200,8 @@ window.SNOWTEE_MENU = [
     "en": "Thai Milk Tea with Cream",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-16.webp"
   },
   {
     "id": 17,
@@ -195,7 +212,8 @@ window.SNOWTEE_MENU = [
     "en": "Green Milk Tea with Cream",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-17.webp"
   },
   {
     "id": 18,
@@ -206,7 +224,8 @@ window.SNOWTEE_MENU = [
     "en": "Milk Tea Brothers",
     "badge": "แนะนำ",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-18.webp"
   },
   {
     "id": 19,
@@ -217,7 +236,8 @@ window.SNOWTEE_MENU = [
     "en": "Milk Tea Duo",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-19.webp"
   },
   {
     "id": 48,
@@ -228,7 +248,8 @@ window.SNOWTEE_MENU = [
     "en": "Thai Tea Caramel Biscuit",
     "badge": "เมนูใหม่",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-48.webp"
   },
   {
     "id": 49,
@@ -239,7 +260,8 @@ window.SNOWTEE_MENU = [
     "en": "Thai Chocolate Tea",
     "badge": "เมนูใหม่",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-49.webp"
   },
   {
     "id": 20,
@@ -250,7 +272,8 @@ window.SNOWTEE_MENU = [
     "en": "Matcha Milk",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-20.webp"
   },
   {
     "id": 21,
@@ -261,7 +284,8 @@ window.SNOWTEE_MENU = [
     "en": "Matcha Strawberry",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-21.webp"
   },
   {
     "id": 22,
@@ -272,7 +296,8 @@ window.SNOWTEE_MENU = [
     "en": "Matcha Oreo",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-22.webp"
   },
   {
     "id": 43,
@@ -283,7 +308,8 @@ window.SNOWTEE_MENU = [
     "en": "Matcha Strawberry Cheesecake",
     "badge": "เมนูใหม่",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-43.webp"
   },
   {
     "id": 44,
@@ -294,7 +320,8 @@ window.SNOWTEE_MENU = [
     "en": "Matcha Choc Cheese",
     "badge": "เมนูใหม่",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-44.webp"
   },
   {
     "id": 38,
@@ -305,7 +332,8 @@ window.SNOWTEE_MENU = [
     "en": "Strawberry Milk Smoothie",
     "badge": "เมนูใหม่",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-38.webp"
   },
   {
     "id": 39,
@@ -316,7 +344,8 @@ window.SNOWTEE_MENU = [
     "en": "Strawberry Cheesecake Smoothie",
     "badge": "เมนูใหม่",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-39.webp"
   },
   {
     "id": 40,
@@ -327,7 +356,8 @@ window.SNOWTEE_MENU = [
     "en": "Grape Yoko Smoothie",
     "badge": "เมนูใหม่",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-40.webp"
   },
   {
     "id": 41,
@@ -338,7 +368,8 @@ window.SNOWTEE_MENU = [
     "en": "Strawberry Yoko Smoothie",
     "badge": "เมนูใหม่",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-41.webp"
   },
   {
     "id": 42,
@@ -349,7 +380,8 @@ window.SNOWTEE_MENU = [
     "en": "Yoyo Berry",
     "badge": "เมนูใหม่",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-42.webp"
   },
   {
     "id": 47,
@@ -360,7 +392,8 @@ window.SNOWTEE_MENU = [
     "en": "Mango Coconut Milk Smoothie",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-47.webp"
   },
   {
     "id": 23,
@@ -371,7 +404,8 @@ window.SNOWTEE_MENU = [
     "en": "Waffle Soft Serve",
     "badge": "เริ่มต้น 15฿",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-23.webp"
   },
   {
     "id": 24,
@@ -382,7 +416,8 @@ window.SNOWTEE_MENU = [
     "en": "Chocolate Soft Serve",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-24.webp"
   },
   {
     "id": 25,
@@ -393,7 +428,8 @@ window.SNOWTEE_MENU = [
     "en": "Matcha Soft Serve",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-25.webp"
   },
   {
     "id": 26,
@@ -404,7 +440,8 @@ window.SNOWTEE_MENU = [
     "en": "Strawberry Soft Serve",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-26.webp"
   },
   {
     "id": 27,
@@ -415,7 +452,8 @@ window.SNOWTEE_MENU = [
     "en": "Strawberry Sundae",
     "badge": "ยอดนิยม",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-27.webp"
   },
   {
     "id": 28,
@@ -426,7 +464,8 @@ window.SNOWTEE_MENU = [
     "en": "Mango Sundae",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-28.webp"
   },
   {
     "id": 29,
@@ -437,7 +476,8 @@ window.SNOWTEE_MENU = [
     "en": "Brown Sugar Sundae",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-29.webp"
   },
   {
     "id": 30,
@@ -448,7 +488,8 @@ window.SNOWTEE_MENU = [
     "en": "Chocolate Sundae",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-30.webp"
   },
   {
     "id": 31,
@@ -459,7 +500,8 @@ window.SNOWTEE_MENU = [
     "en": "Oreo Sundae",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-31.webp"
   },
   {
     "id": 50,
@@ -470,7 +512,8 @@ window.SNOWTEE_MENU = [
     "en": "Snow Salt Sundae",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-50.webp"
   },
   {
     "id": 32,
@@ -481,7 +524,8 @@ window.SNOWTEE_MENU = [
     "en": "Egg Tart",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-32.webp"
   },
   {
     "id": 33,
@@ -492,7 +536,8 @@ window.SNOWTEE_MENU = [
     "en": "Hong Kong Egg Tart",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-33.webp"
   },
   {
     "id": 34,
@@ -503,7 +548,8 @@ window.SNOWTEE_MENU = [
     "en": "Sweet Potato Bread",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-34.webp"
   },
   {
     "id": 35,
@@ -514,7 +560,8 @@ window.SNOWTEE_MENU = [
     "en": "Donut",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-35.webp"
   },
   {
     "id": 36,
@@ -525,7 +572,8 @@ window.SNOWTEE_MENU = [
     "en": "Garlic Bread",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-36.webp"
   },
   {
     "id": 37,
@@ -536,7 +584,8 @@ window.SNOWTEE_MENU = [
     "en": "Cheese Bread Toast",
     "badge": "",
     "desc": "",
-    "new": false
+    "new": false,
+    "preview": "assets/thumbs/item-37.webp"
   },
   {
     "id": 45,
@@ -547,6 +596,7 @@ window.SNOWTEE_MENU = [
     "en": "Hawaiian Pizza • 6 slices",
     "badge": "ของอร่อย",
     "desc": "",
-    "new": true
+    "new": true,
+    "preview": "assets/thumbs/item-45.webp"
   }
 ];
