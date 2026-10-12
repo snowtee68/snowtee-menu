@@ -41,17 +41,35 @@
   dialog.showModal();
  }
  grid.addEventListener('click',ev=>{const b=ev.target.closest('[data-product]');if(!b)return;const p=products.find(x=>x.id===Number(b.dataset.product));if(p)openProduct(p);});
- // Bakery uses the original product files; full image is always displayed with contain.
- const chosenBakery=[32,36,37,34,33];
- bakery.innerHTML=chosenBakery.map(id=>products.find(p=>p.id===id)).filter(Boolean).map(p=>`<button type="button" class="bakery-card" data-bakery="${p.id}" aria-label="ดูภาพเต็ม ${clean(p.name)}"><img loading="lazy" src="${clean(preview(p))}" alt="${clean(p.name)}"><div class="bakery-meta"><div><small>SNOWTEE BAKERY</small><h3>${clean(p.name)}</h3></div><b>${p.price===null?'สอบถามราคา':p.price+'฿'}</b></div></button>`).join('');
- bakery.addEventListener('click',e=>{const b=e.target.closest('[data-bakery]');if(!b)return;const p=products.find(x=>x.id===Number(b.dataset.bakery));if(p)openProduct(p);});
- const posterData=[
-  ['fruit','ชาผลไม้สด','assets/poster-fruit.png','assets/thumbs/poster-fruit.webp'],
-  ['milk','ชานมหอมหวาน','assets/poster-milk.png','assets/thumbs/poster-milk.webp'],
-  ['sundae','เมนูซันเดย์','assets/poster-sundae.png','assets/thumbs/poster-sundae.webp'],
-  ['smoothie','ซีรีส์สมูทตี้','assets/poster-smoothie.png','assets/thumbs/poster-smoothie.webp']
+ // Bakery uses one combined poster plus selected original product files.
+ const bakeryEntries=[
+  {type:'poster', key:'bakery-poster', title:'เมนูเบเกอรี่รวม', price:'ดูภาพรวม', image:'assets/poster-bakery-full.png', label:'SNOWTEE BAKERY'},
+  ...[32,36,37,34].map(id=>products.find(p=>p.id===id)).filter(Boolean).map(p=>({type:'product', ...p, label:'SNOWTEE BAKERY'}))
  ];
- posters.innerHTML=posterData.map(([key,title,,thumb])=>`<button type="button" class="poster-card" data-poster="${key}" aria-label="ดูภาพเต็ม ${title}"><img src="${thumb}" alt="ภาพแผ่นเมนู ${title}" loading="lazy"><span class="post-text"><strong>${title}</strong><span>↗</span></span></button>`).join('');
+ bakery.innerHTML=bakeryEntries.map(item=>{
+   if(item.type==='poster') return `<button type="button" class="bakery-card poster-lead" data-poster-open="${clean(item.key)}" aria-label="ดูภาพเต็ม ${clean(item.title)}"><img loading="lazy" src="${clean(item.image)}" alt="${clean(item.title)}"><div class="bakery-meta"><div><small>${clean(item.label)}</small><h3>${clean(item.title)}</h3></div><b>${clean(item.price)}</b></div></button>`;
+   return `<button type="button" class="bakery-card" data-bakery="${item.id}" aria-label="ดูภาพเต็ม ${clean(item.name)}"><img loading="lazy" src="${clean(preview(item))}" alt="${clean(item.name)}"><div class="bakery-meta"><div><small>${clean(item.label)}</small><h3>${clean(item.name)}</h3></div><b>${item.price===null?'สอบถามราคา':item.price+'฿'}</b></div></button>`;
+ }).join('');
+ bakery.addEventListener('click',e=>{
+   const posterBtn=e.target.closest('[data-poster-open]');
+   if(posterBtn){
+     dialogContent.innerHTML=`<div class="modal-poster-head">เมนูเบเกอรี่รวม</div><div class="modal-poster"><img src="assets/poster-bakery-full.png" alt="เมนูเบเกอรี่ SNOWTEE"></div>`;
+     dialog.showModal();
+     return;
+   }
+   const b=e.target.closest('[data-bakery]');if(!b)return;const p=products.find(x=>x.id===Number(b.dataset.bakery));if(p)openProduct(p);
+ });
+ const posterData=[
+  ['fruit','ชาผลไม้สด','assets/poster-fruit-full.png'],
+  ['milk','ชานมหอมหวาน','assets/poster-milk-full.png'],
+  ['sundae','เมนูซันเดย์','assets/poster-sundae-full.png'],
+  ['smoothie','ซีรีส์สมูทตี้','assets/poster-smoothie-full.png'],
+  ['bakery','เบเกอรี่','assets/poster-bakery-full.png'],
+  ['pizza','พิซซ่าฮาวายเอี้ยน','assets/poster-pizza-full.png'],
+  ['matcha','มัทฉะ','assets/poster-matcha-full.png'],
+  ['okinawa','โอคินาวะและเกลือหิมะ','assets/poster-okinawa-full.jpg']
+ ];
+ posters.innerHTML=posterData.map(([key,title,src])=>`<button type="button" class="poster-card" data-poster="${key}" aria-label="ดูภาพเต็ม ${title}"><img src="${src}" alt="ภาพแผ่นเมนู ${title}" loading="lazy"><span class="post-text"><strong>${title}</strong><span>↗</span></span></button>`).join('');
  posters.addEventListener('click',e=>{const b=e.target.closest('[data-poster]');if(!b)return;const p=posterData.find(x=>x[0]===b.dataset.poster);if(!p)return;dialogContent.innerHTML=`<div class="modal-poster-head">${clean(p[1])}</div><div class="modal-poster"><img src="${clean(p[2])}" alt="แผ่นเมนู ${clean(p[1])}"></div>`;dialog.showModal();});
  render();
 })();
