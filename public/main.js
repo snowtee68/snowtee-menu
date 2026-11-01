@@ -18,7 +18,7 @@
   // Source originals are kept unmodified. WebP previews are optimized for mobile.
   const posters = {
     'ice-cream': {title: 'ไอศกรีมโคน', file: 'assets/originals/ice-cream.png'},
-    'fruit-tea': {title: 'ซีรีส์ชาผลไม้สด', file: 'assets/originals/fruit-tea.png'},
+    'fruit-tea': {title: 'ซีรีส์ชาผลไม้สด', file: 'assets/snowtee-fruit-tea-final.png'},
     'milk-tea': {title: 'ชานมหอมหวาน', file: 'assets/originals/milk-tea.png'},
     'smoothie': {title: 'ซีรีส์สมูทตี้', file: 'assets/originals/smoothie.png'},
     'sundae': {title: 'เมนูซันเดย์', file: 'assets/originals/sundae.png'},
